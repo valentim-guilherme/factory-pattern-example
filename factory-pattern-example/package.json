@@ -1,0 +1,30 @@
+{
+  "name": "factory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "mocha --parallel ./test/unit/*.test.js",
+    "test:cov": "npx nyc mocha --parallel ./test/unit/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentim-guilherme/factory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valentim-guilherme/factory/issues"
+  },
+  "homepage": "https://github.com/valentim-guilherme/factory#readme",
+  "devDependencies": {
+    "rewiremock": "^3.14.5",
+    "sinon": "^17.0.1"
+  },
+  "dependencies": {
+    "mocha": "^10.3.0",
+    "nyc": "^15.1.0"
+  }
+}
