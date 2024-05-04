@@ -1,3 +1,6 @@
+/*
+//without factory
+
 const UserService = require("./service/userService.js");
 const UserRepository = require("./repository/userRepository.js");
 const Database = require("./util/database.js");
@@ -8,6 +11,17 @@ const Database = require("./util/database.js");
   const userRepository = new UserRepository({ dbConnection });
   const userService = new UserService({ userRepository });
   const result = await userService.getUsers({ name: "Guilherme*" });
+
+  console.log(result);
+})();
+*/
+
+//with factory
+const UserFactory = require("./factory/userFactory.js");
+
+(async () => {
+  const userFactory = await UserFactory.createInstance();
+  const result = await userFactory.getUsers({ name: "Guilherme*" });
 
   console.log(result);
 })();
