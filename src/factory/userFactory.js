@@ -1,8 +1,8 @@
-const Database = require("../util/database.js");
-const UserRepository = require("../repository/userRepository.js");
-const UserService = require("../service/userService.js");
+import Database from "../util/database.js";
+import UserRepository from "../repository/userRepository.js";
+import UserService from "../service/userService.js";
 
-class UserFactory {
+export default class UserFactory {
   static async createInstance() {
     const db = new Database({ connectionString: "mysql:host" });
     const dbConnection = await db.connect();
@@ -12,5 +12,3 @@ class UserFactory {
     return userService;
   }
 }
-
-module.exports = UserFactory;

@@ -1,4 +1,4 @@
-class Database {
+export default class Database {
   constructor({ connectionString }) {
     this.connectionString = connectionString;
   }
@@ -23,5 +23,3 @@ class Database {
     ];
   }
 }
-
-module.exports = Database;

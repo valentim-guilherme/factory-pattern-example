@@ -1,7 +1,7 @@
-const { describe, it } = require("mocha");
-const { assert, deepStrictEqual } = require("assert");
-const rewiremock = require("rewiremock/node");
-const MockValidUtilDatabase = require("../mocks/js/MockUtilDatabaseValid.js");
+import { describe, it } from "mocha";
+import { deepStrictEqual } from "assert";
+import MockValidUtilDatabase from "../mocks/js/MockUtilDatabaseValid.js";
+import rewiremock from "rewiremock";
 
 describe("User factory test suite", () => {
   it("Given a valid mocked database should return a valid user service object instance", async () => {
