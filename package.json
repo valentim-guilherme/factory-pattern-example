@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon src/main.js",
+    "start": "nodemon src/index.js",
     "test": "mocha --parallel ./test/unit/*.test.js",
     "test:cov": "npx nyc mocha --parallel ./test/unit/*.test.js"
   },
