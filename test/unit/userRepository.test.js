@@ -1,13 +1,14 @@
-const { describe, it } = require("mocha");
-const { assert, deepStrictEqual } = require("assert");
-const sinon = require("sinon");
-const validDatabase = require("../mocks/json/validDatabase.json");
-const UserRepository = require("../../src/repository/userRepository.js");
+import { describe, it } from "mocha";
+import { deepStrictEqual } from "assert";
+import Sinon from "sinon";
+
+import UserRepository from "../../src/repository/userRepository.js";
+import validDatabase from "../mocks/json/validDatabase.json" assert { type: "json" };
 
 describe("User repository test suite", () => {
   it("Should return all users contained on the database", async () => {
     const dbConnectionStub = {
-      find: sinon.stub().resolves(validDatabase),
+      find: Sinon.stub().resolves(validDatabase),
     };
 
     const userRepository = new UserRepository({

@@ -1,7 +1,14 @@
-import { describe, it } from "mocha";
-import { deepStrictEqual } from "assert";
-import MockValidUtilDatabase from "../mocks/js/MockUtilDatabaseValid.js";
-import rewiremock from "rewiremock";
+/*
+ * README
+ * Unfortunately rewiremock is not ESM native mode compatible, so we leave here the previous version without ESM.
+ * https://github.com/theKashey/rewiremock/issues/137
+ */
+
+/*
+const { describe, it } = require("mocha");
+const { assert, deepStrictEqual } = require("assert");
+const rewiremock = require("rewiremock/node");
+const MockValidUtilDatabase = require("../mocks/js/MockUtilDatabaseValid.js");
 
 describe("User factory test suite", () => {
   it("Given a valid mocked database should return a valid user service object instance", async () => {
@@ -19,3 +26,4 @@ describe("User factory test suite", () => {
     deepStrictEqual(expected, result);
   });
 });
+*/
